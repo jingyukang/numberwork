@@ -9,7 +9,14 @@ export interface IStudent {
   statistics: Array<number>;
 }
 
-export interface ICreateStudnet {
+export interface IStudnetCreatePayload {
   studentName: string;
   age: number;
+}
+
+export interface IStudentUpdatePayload {
+  id: number;
+  studentName: string;
+  age: number;
+  scores: Array<IBehaviourScored>;
 }

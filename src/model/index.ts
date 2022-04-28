@@ -1,4 +1,8 @@
-import { IStudent, ICreateStudnet } from "./students/index";
+import {
+  IStudent,
+  IStudnetCreatePayload,
+  IStudentUpdatePayload,
+} from "./students/index";
 import {
   IBehaviour,
   IBehaviourScored,
@@ -8,7 +12,8 @@ import {
 
 export type {
   IStudent,
-  ICreateStudnet,
+  IStudnetCreatePayload,
+  IStudentUpdatePayload,
   IBehaviour,
   IBehaviourScored,
   IBehaviourCreatePayload,

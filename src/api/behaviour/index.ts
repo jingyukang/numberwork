@@ -37,7 +37,7 @@ export const deleteBehaviour = (id: number): Promise<any> => {
   );
 };
 
-export const updateItem = (
+export const updateBehaviour = (
   behaviour: IBehaviourUpdatePayload
 ): Promise<IBehaviour> => {
   return new Promise<IBehaviour>((resolve, reject) =>

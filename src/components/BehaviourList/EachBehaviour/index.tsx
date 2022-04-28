@@ -4,7 +4,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { IBehaviour } from "../../../model";
 import { useAppDispatch } from "../../../app/hooks";
 import { deleteBehaviourAsync } from "../../../slice/behaviour";
-import { getBehaviourAsync } from "../../../slice/behaviour/index";
+import { getBehavioursAsync } from "../../../slice/behaviour/index";
 
 interface listProps {
   b: IBehaviour;
@@ -14,7 +14,7 @@ const EachBehaviour = ({ b }: listProps): JSX.Element => {
   const dispatch = useAppDispatch();
   const deleteBehaviourButton = (): void => {
     dispatch(deleteBehaviourAsync(b.id));
-    dispatch(getBehaviourAsync());
+    dispatch(getBehavioursAsync());
   };
   return (
     <TableRow

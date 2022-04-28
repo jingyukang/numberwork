@@ -16,7 +16,7 @@ const initialState: behaviourState = {
   allBehaviours: [],
 };
 
-export const getBehaviourAsync = createAsyncThunk(
+export const getBehavioursAsync = createAsyncThunk(
   "behaviours/fetchBehaviours",
   async () => await fetchBehaviours()
 );
@@ -51,7 +51,7 @@ const behaviourSlice = createSlice({
   },
   extraReducers(builder) {
     builder
-      .addCase(getBehaviourAsync.fulfilled, (state, action) => {
+      .addCase(getBehavioursAsync.fulfilled, (state, action) => {
         state.allBehaviours = action.payload;
       })
       .addCase(createBehaviourAsync.fulfilled, (state, action) =>

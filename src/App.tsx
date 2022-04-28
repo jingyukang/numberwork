@@ -6,7 +6,8 @@ import Box from "@mui/material/Box";
 import BehaviourList from "./components/BehaviourList";
 import AboutStudent from "./components/AboutStudent";
 import { useAppDispatch } from "./app/hooks";
-import { getBehaviourAsync } from "./slice/behaviour/index";
+import { getBehavioursAsync } from "./slice/behaviour/index";
+import { getStudentsAsync } from "./slice/students/index";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -50,7 +51,8 @@ function App() {
   };
 
   useEffect(() => {
-    dispatch(getBehaviourAsync());
+    dispatch(getBehavioursAsync());
+    dispatch(getStudentsAsync());
   }, [dispatch]);
 
   return (

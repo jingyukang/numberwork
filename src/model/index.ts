@@ -1,4 +1,4 @@
-import { IStudent } from "./students/index";
+import { IStudent, ICreateStudnet } from "./students/index";
 import { IBehaviour } from "./behaviour";
 
-export type { IStudent, IBehaviour };
+export type { IStudent, ICreateStudnet, IBehaviour };

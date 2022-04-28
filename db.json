@@ -1,4 +1,21 @@
 {
-  "behaviour": [],
+  "behaviours": [
+    {
+      "id": 1,
+      "behaviour": "read"
+    },
+    {
+      "id": 2,
+      "behaviour": "speak"
+    },
+    {
+      "id": 3,
+      "behaviour": "write"
+    },
+    {
+      "id": 4,
+      "behaviour": "physical"
+    }
+  ],
   "students": []
 }

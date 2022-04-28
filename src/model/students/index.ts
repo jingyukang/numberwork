@@ -1,10 +1,10 @@
-import { IBehaviour } from "..";
+import { IBehaviourScored } from "..";
 
 export interface IStudent {
   id: number;
   studentName: string;
   age: number;
-  scores: Array<IBehaviour>;
+  scores: Array<IBehaviourScored>;
   average: number;
   statistics: Array<number>;
 }

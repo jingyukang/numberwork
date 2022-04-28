@@ -1,4 +1,16 @@
 import { IStudent, ICreateStudnet } from "./students/index";
-import { IBehaviour } from "./behaviour";
+import {
+  IBehaviour,
+  IBehaviourScored,
+  IBehaviourCreatePayload,
+  IBehaviourUpdatePayload,
+} from "./behaviour";
 
-export type { IStudent, ICreateStudnet, IBehaviour };
+export type {
+  IStudent,
+  ICreateStudnet,
+  IBehaviour,
+  IBehaviourScored,
+  IBehaviourCreatePayload,
+  IBehaviourUpdatePayload,
+};

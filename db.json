@@ -2,19 +2,19 @@
   "behaviours": [
     {
       "id": 1,
-      "behaviour": "read"
+      "behaviour": "aggression"
     },
     {
       "id": 2,
-      "behaviour": "speak"
+      "behaviour": "pudency"
     },
     {
       "id": 3,
-      "behaviour": "write"
+      "behaviour": "craving"
     },
     {
       "id": 4,
-      "behaviour": "physical"
+      "behaviour": "caution"
     }
   ],
   "students": [
@@ -25,30 +25,27 @@
       "scores": [
         {
           "id": 1,
-          "behaviour": "read",
+          "behaviour": "aggression",
           "score": 7
         },
         {
           "id": 2,
-          "behaviour": "speak",
+          "behaviour": "pudency",
           "score": 8
         },
         {
           "id": 3,
-          "behaviour": "write",
+          "behaviour": "craving",
           "score": 4
         },
         {
           "id": 4,
-          "behaviour": "physical",
+          "behaviour": "caution",
           "score": 5
         }
       ],
       "average": 6,
-      "statistics": [
-        4,
-        8
-      ]
+      "statistics": [4, 8]
     },
     {
       "id": 2,
@@ -57,30 +54,27 @@
       "scores": [
         {
           "id": 1,
-          "behaviour": "read",
+          "behaviour": "aggression",
           "score": 5
         },
         {
           "id": 2,
-          "behaviour": "speak",
+          "behaviour": "pudency",
           "score": 2
         },
         {
           "id": 3,
-          "behaviour": "write",
+          "behaviour": "craving",
           "score": 2
         },
         {
           "id": 4,
-          "behaviour": "physical",
+          "behaviour": "caution",
           "score": 5
         }
       ],
       "average": 3.5,
-      "statistics": [
-        2,
-        5
-      ]
+      "statistics": [2, 5]
     },
     {
       "id": 3,
@@ -89,30 +83,27 @@
       "scores": [
         {
           "id": 1,
-          "behaviour": "read",
+          "behaviour": "aggression",
           "score": 8
         },
         {
           "id": 2,
-          "behaviour": "speak",
+          "behaviour": "pudency",
           "score": 5
         },
         {
           "id": 3,
-          "behaviour": "write",
+          "behaviour": "craving",
           "score": 4
         },
         {
           "id": 4,
-          "behaviour": "physical",
+          "behaviour": "caution",
           "score": 7
         }
       ],
       "average": 6,
-      "statistics": [
-        4,
-        8
-      ]
+      "statistics": [4, 8]
     },
     {
       "studentName": "JInKang",

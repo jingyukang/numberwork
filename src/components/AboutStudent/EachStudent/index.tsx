@@ -10,14 +10,8 @@ import {
   Table,
   tableCellClasses,
   styled,
-  Button,
 } from "@mui/material";
-import DeleteIcon from "@mui/icons-material/Delete";
 import { useAppDispatch } from "../../../app/hooks";
-import {
-  deleteStudentAsync,
-  getStudentsAsync,
-} from "../../../slice/students/index";
 
 interface listProps {
   student: IStudent;
@@ -35,10 +29,7 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
 
 const EachStudent = ({ student }: listProps): JSX.Element => {
   const dispatch = useAppDispatch();
-  const deleteStudentButton = (): void => {
-    dispatch(deleteStudentAsync(student.id));
-    dispatch(getStudentsAsync());
-  };
+
   return (
     <TableContainer component={Paper} style={{ marginBottom: "1rem" }}>
       <Table sx={{ minWidth: 400 }} aria-label="simple table">
@@ -53,7 +44,6 @@ const EachStudent = ({ student }: listProps): JSX.Element => {
             ))}
             <StyledTableCell align="center">Average</StyledTableCell>
             <StyledTableCell align="center">Statistics</StyledTableCell>
-            <StyledTableCell align="center">Action</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -72,16 +62,6 @@ const EachStudent = ({ student }: listProps): JSX.Element => {
               {student.statistics[0] === student.statistics[1]
                 ? student.statistics[0]
                 : `${student.statistics[0]} to ${student.statistics[1]}`}
-            </StyledTableCell>
-            <StyledTableCell align="center">
-              <Button
-                variant="outlined"
-                color="error"
-                endIcon={<DeleteIcon />}
-                onClick={deleteStudentButton}
-              >
-                Delete
-              </Button>
             </StyledTableCell>
           </TableRow>
         </TableBody>

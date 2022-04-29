@@ -115,36 +115,9 @@
       ]
     },
     {
-      "studentName": "jinjin",
+      "studentName": "JInKang",
       "age": 11,
-      "id": 4,
-      "scores": [
-        {
-          "id": 1,
-          "behaviour": "read",
-          "score": 9
-        },
-        {
-          "id": 2,
-          "behaviour": "speak",
-          "score": 7
-        },
-        {
-          "id": 3,
-          "behaviour": "write",
-          "score": 6
-        },
-        {
-          "id": 4,
-          "behaviour": "physical",
-          "score": 8
-        }
-      ],
-      "average": 7.5,
-      "statistics": [
-        6,
-        9
-      ]
+      "id": 4
     }
   ]
 }

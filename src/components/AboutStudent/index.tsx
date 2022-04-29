@@ -34,7 +34,9 @@ const AboutStudent = (): JSX.Element => {
   const [personName, setPersonName] = useState<string[]>([]);
   const allStudents = useAppSelector(selectAllStudents);
 
-  const names = allStudents.map((s) => s.studentName);
+  const testedStudents = allStudents.filter((s) => s.scores);
+
+  const names = testedStudents.map((s) => s.studentName);
 
   const handleChange = (event: SelectChangeEvent<typeof personName>) => {
     const {

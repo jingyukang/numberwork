@@ -26,28 +26,28 @@
         {
           "id": 1,
           "behaviour": "read",
-          "score": 5
+          "score": 7
         },
         {
           "id": 2,
           "behaviour": "speak",
-          "score": 4
+          "score": 8
         },
         {
           "id": 3,
           "behaviour": "write",
-          "score": 3
+          "score": 4
         },
         {
           "id": 4,
           "behaviour": "physical",
-          "score": 2
+          "score": 5
         }
       ],
-      "average": 3.5,
+      "average": 6,
       "statistics": [
-        2,
-        5
+        4,
+        8
       ]
     },
     {
@@ -58,17 +58,17 @@
         {
           "id": 1,
           "behaviour": "read",
-          "score": 2
+          "score": 5
         },
         {
           "id": 2,
           "behaviour": "speak",
-          "score": 3
+          "score": 2
         },
         {
           "id": 3,
           "behaviour": "write",
-          "score": 4
+          "score": 2
         },
         {
           "id": 4,
@@ -90,28 +90,60 @@
         {
           "id": 1,
           "behaviour": "read",
-          "score": 3
+          "score": 8
         },
         {
           "id": 2,
           "behaviour": "speak",
-          "score": 3
+          "score": 5
         },
         {
           "id": 3,
           "behaviour": "write",
-          "score": 3
+          "score": 4
         },
         {
           "id": 4,
           "behaviour": "physical",
-          "score": 3
+          "score": 7
         }
       ],
-      "average": 3,
+      "average": 6,
       "statistics": [
-        3,
-        3
+        4,
+        8
+      ]
+    },
+    {
+      "studentName": "jinjin",
+      "age": 11,
+      "id": 4,
+      "scores": [
+        {
+          "id": 1,
+          "behaviour": "read",
+          "score": 9
+        },
+        {
+          "id": 2,
+          "behaviour": "speak",
+          "score": 7
+        },
+        {
+          "id": 3,
+          "behaviour": "write",
+          "score": 6
+        },
+        {
+          "id": 4,
+          "behaviour": "physical",
+          "score": 8
+        }
+      ],
+      "average": 7.5,
+      "statistics": [
+        6,
+        9
       ]
     }
   ]

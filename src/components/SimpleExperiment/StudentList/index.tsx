@@ -1,27 +1,21 @@
 import React from "react";
-import { IStudent } from "../../../model";
 import {
-  Paper,
-  TableRow,
-  TableHead,
-  TableContainer,
-  TableCell,
-  TableBody,
+  Button,
   Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
   tableCellClasses,
   styled,
-  Button,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
+import { IStudent } from "../../../model";
 import { useAppDispatch } from "../../../app/hooks";
-import {
-  deleteStudentAsync,
-  getStudentsAsync,
-} from "../../../slice/students/index";
-
-interface listProps {
-  student: IStudent;
-}
+import { deleteStudentAsync, getStudentsAsync } from "../../../slice/students";
+import { Link } from "react-router-dom";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -33,47 +27,47 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   },
 }));
 
-const EachStudent = ({ student }: listProps): JSX.Element => {
+interface listProps {
+  student: IStudent;
+}
+
+const StudentList = ({ student }: listProps): JSX.Element => {
   const dispatch = useAppDispatch();
   const deleteStudentButton = (): void => {
     dispatch(deleteStudentAsync(student.id));
     dispatch(getStudentsAsync());
   };
   return (
-    <TableContainer component={Paper} style={{ marginBottom: "1rem" }}>
+    <TableContainer component={Paper} style={{ marginTop: "1rem" }}>
       <Table sx={{ minWidth: 400 }} aria-label="simple table">
         <TableHead>
           <TableRow>
-            <StyledTableCell>Studnet Name</StyledTableCell>
+            <StyledTableCell>
+              <b>Name</b>
+            </StyledTableCell>
             <StyledTableCell align="center">Age</StyledTableCell>
-            {student.scores.map((s) => (
-              <StyledTableCell key={s.id} align="center">
-                {s.behaviour}
-              </StyledTableCell>
-            ))}
-            <StyledTableCell align="center">Average</StyledTableCell>
-            <StyledTableCell align="center">Statistics</StyledTableCell>
+            <StyledTableCell align="center">Tested</StyledTableCell>
             <StyledTableCell align="center">Action</StyledTableCell>
           </TableRow>
         </TableHead>
         <TableBody>
           <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
             <StyledTableCell component="th" scope="row">
-              <b>{student.studentName}</b>
+              {student.studentName}
             </StyledTableCell>
             <StyledTableCell align="center">{student.age}</StyledTableCell>
-            {student.scores.map((score) => (
-              <StyledTableCell key={score.id} align="center">
-                {score.score}
-              </StyledTableCell>
-            ))}
-            <StyledTableCell align="center">{student.average}</StyledTableCell>
             <StyledTableCell align="center">
-              {student.statistics[0] === student.statistics[1]
-                ? student.statistics[0]
-                : `${student.statistics[0]} to ${student.statistics[1]}`}
+              {student.scores ? <b>O</b> : <b>X</b>}
             </StyledTableCell>
             <StyledTableCell align="center">
+              <Link
+                to={`/testing/${student.studentName}`}
+                style={{ textDecoration: "none" }}
+              >
+                <Button color="secondary" variant="outlined">
+                  Start the Test
+                </Button>
+              </Link>
               <Button
                 variant="outlined"
                 color="error"
@@ -90,4 +84,4 @@ const EachStudent = ({ student }: listProps): JSX.Element => {
   );
 };
 
-export default EachStudent;
+export default StudentList;

@@ -14,11 +14,24 @@ import {
   Paper,
   Button,
   TextField,
+  Stack,
+  styled,
+  tableCellClasses,
 } from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 import { IBehaviourCreatePayload } from "../../model";
 import { IBehaviour } from "../../model/behaviour/index";
 import EachBehaviour from "./EachBehaviour";
+
+const StyledTableCell = styled(TableCell)(({ theme }) => ({
+  [`&.${tableCellClasses.head}`]: {
+    backgroundColor: theme.palette.common.black,
+    color: theme.palette.common.white,
+  },
+  [`&.${tableCellClasses.body}`]: {
+    fontSize: 14,
+  },
+}));
 
 const BehaviourList = (): JSX.Element => {
   const allBehaviours = useAppSelector(selectAllBehaviour);
@@ -39,10 +52,11 @@ const BehaviourList = (): JSX.Element => {
 
   return (
     <>
-      <div
+      <Stack
+        spacing={2}
+        direction="row"
         style={{
           display: "flex",
-          justifyContent: "space-around",
           alignItems: "center",
           textAlign: "center",
         }}
@@ -61,20 +75,20 @@ const BehaviourList = (): JSX.Element => {
         >
           Add Behaviour
         </Button>
-      </div>
+      </Stack>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 400 }} aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>
+              <StyledTableCell>
                 <b>Behaviours ID</b>
-              </TableCell>
-              <TableCell align="center">
+              </StyledTableCell>
+              <StyledTableCell align="center">
                 <b>Name</b>
-              </TableCell>
-              <TableCell align="center">
+              </StyledTableCell>
+              <StyledTableCell align="center">
                 <b>Action</b>
-              </TableCell>
+              </StyledTableCell>
             </TableRow>
           </TableHead>
           <TableBody>

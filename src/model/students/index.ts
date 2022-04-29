@@ -15,8 +15,10 @@ export interface IStudnetCreatePayload {
 }
 
 export interface IStudentUpdatePayload {
-  id: number;
-  studentName: string;
-  age: number;
-  scores: Array<IBehaviourScored>;
+  id?: number;
+  studentName?: string;
+  age?: number;
+  scores?: Array<IBehaviourScored>;
+  average?: number;
+  statistics?: Array<number>;
 }

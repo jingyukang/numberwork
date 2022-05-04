@@ -19,14 +19,26 @@ const EachRow = ({ b }: listProps): JSX.Element => {
   const allScoredBe = useAppSelector(selectAllScoredBehaviour);
   const [numScore, setNumScore] = useState<number>(0);
 
-  const scoreSendButton = (): void => {
+  // const scoreSendButton = (): void => {
+  //   const addScoredBehaviourPayload = {
+  //     ...b,
+  //     score: numScore,
+  //   };
+  //   allScoredBe.find((sb: IBehaviourScored) => sb.id === b.id)
+  //     ? dispatch(editScoredBehaviour(addScoredBehaviourPayload))
+  //     : dispatch(addScoredBehaviour(addScoredBehaviourPayload));
+  // };
+  const scoreSending = (e: number): void => {
+    setNumScore(e);
     const addScoredBehaviourPayload = {
       ...b,
-      score: numScore,
+      score: e,
     };
+
     allScoredBe.find((sb: IBehaviourScored) => sb.id === b.id)
       ? dispatch(editScoredBehaviour(addScoredBehaviourPayload))
       : dispatch(addScoredBehaviour(addScoredBehaviourPayload));
+    // console.log(allScoredBe);
   };
 
   return (
@@ -44,11 +56,11 @@ const EachRow = ({ b }: listProps): JSX.Element => {
           label="Number"
           type="number"
           onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-            setNumScore(Number(e.target.value));
+            scoreSending(Number(e.target.value));
           }}
         />
       </TableCell>
-      <TableCell align="center">
+      {/* <TableCell align="center">
         <Button
           variant="contained"
           endIcon={<SendIcon />}
@@ -57,7 +69,7 @@ const EachRow = ({ b }: listProps): JSX.Element => {
         >
           Send
         </Button>
-      </TableCell>
+      </TableCell> */}
     </TableRow>
   );
 };

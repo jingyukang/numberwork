@@ -34,8 +34,6 @@ const TestingPage = (): JSX.Element => {
     (s) => s.studentName === testedStudentName
   );
 
-  console.log(allScoredBehavior);
-
   const resultButton = (): void => {
     const arr: Array<number> = [];
     allScoredBehavior.map((i) => arr.push(i.score));
@@ -47,7 +45,8 @@ const TestingPage = (): JSX.Element => {
       statistics: [Math.min(...arr), Math.max(...arr)],
     };
     dispatch(updateStudentAsync(studentUpdatePayload));
-    dispatch(resetScoredBehaviour());
+    // dispatch(resetScoredBehaviour());
+    console.log(allScoredBehavior);
   };
 
   return (
@@ -68,7 +67,7 @@ const TestingPage = (): JSX.Element => {
                 <b>BeHaviour</b>
               </TableCell>
               <TableCell align="center">Score</TableCell>
-              <TableCell align="center">Action</TableCell>
+              {/* <TableCell align="center">Action</TableCell> */}
             </TableRow>
           </TableHead>
           <TableBody>
@@ -76,9 +75,9 @@ const TestingPage = (): JSX.Element => {
               <EachRow key={b.id} b={b} />
             ))}
             <TableRow>
-              <TableCell></TableCell>
-              <TableCell></TableCell>
-              <TableCell>
+              <TableCell align="center">Action</TableCell>
+              {/* <TableCell></TableCell> */}
+              <TableCell align="center">
                 <Button
                   size="small"
                   variant="contained"

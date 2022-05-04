@@ -45,7 +45,10 @@
         }
       ],
       "average": 6,
-      "statistics": [4, 8]
+      "statistics": [
+        4,
+        8
+      ]
     },
     {
       "id": 2,
@@ -55,7 +58,7 @@
         {
           "id": 1,
           "behaviour": "aggression",
-          "score": 5
+          "score": 3
         },
         {
           "id": 2,
@@ -65,16 +68,19 @@
         {
           "id": 3,
           "behaviour": "craving",
-          "score": 2
+          "score": 1
         },
         {
           "id": 4,
           "behaviour": "caution",
-          "score": 5
+          "score": 4
         }
       ],
-      "average": 3.5,
-      "statistics": [2, 5]
+      "average": 2.5,
+      "statistics": [
+        1,
+        4
+      ]
     },
     {
       "id": 3,
@@ -103,7 +109,10 @@
         }
       ],
       "average": 6,
-      "statistics": [4, 8]
+      "statistics": [
+        4,
+        8
+      ]
     },
     {
       "studentName": "JInKang",
